@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+    <h1>Contacts :)</h1>
+</header>
+<body>
+    <main>
+    <h2>Feel free to contact me with your feedback and suggestions :)</h2>
+    <form action="action" method="GET">
+        <label for="myfirstname">Name</label>
+        <input type="firstname" name="myfirstname" id="myfirstname" placeholder="Enter your name.."/>
+        <label for="mysurname">Email</label>
+        <input type="email" name="myemail" id="myemail" placeholder="Enter your email address.."/>
+        <label for="mycountry">Country</label>
+        <select name="mycountry" id="mycountry">
+            <option value="Zero" disabled selected>Choose your country</option> 
+            <option value="One">United Kingdom</option> 
+            <option value="Two">Ireland</option> 
+            <option value="Three">France</option>
+            <option value="Four">Germany</option>
+            <option value="Five">Spain</option>
+            </select>
+        <label for="mycheckbox">Just check this box for no reason please!</label>
+        <input type="checkbox" name="mycheckbox" value="ticked" id="mycheckbox"/>
+
+        <input type="submit" value="Click here to submit" name="submit" />
+        <form action="mailto:sabina.rabekina21@northampton.ac.uk?subject=Contact Form" method="POST"></form>
+        </form>
+    </main>
+    <aside>
+        <h2>My social media</h2>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/tshrchuu/" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+    </aside>
+</body>
+</html>
