@@ -1,0 +1,91 @@
+body{
+    color:#da42b4;
+    background:
+    /* Pineapple details */
+    radial-gradient(circle closest-side at 50px 50px, #FB8B24 3px, transparent 0),
+    radial-gradient(circle closest-side at 40px 60px, #FB8B24 3px, transparent 0),
+    radial-gradient(circle closest-side at 60px 60px, #FB8B24 3px, transparent 0),
+    radial-gradient(circle closest-side at 50px 70px, #FB8B24 3px, transparent 0),
+    
+    radial-gradient(circle closest-side at 150px 165px, #FB8B24 3px, transparent 0),
+    radial-gradient(circle closest-side at 140px 175px, #FB8B24 3px, transparent 0),
+    radial-gradient(circle closest-side at 160px 175px, #FB8B24 3px, transparent 0),
+    radial-gradient(circle closest-side at 150px 185px, #FB8B24 3px, transparent 0),
+    
+    /* Pineapple base */
+    radial-gradient(ellipse closest-side at 50px 60px, #F9A734 18px, transparent 0),
+    
+    radial-gradient(ellipse closest-side at 150px 175px, #F9A734 18px, transparent 0),
+    
+    /* Pineapple leafs */
+    radial-gradient(circle closest-side at 30px 40px, #F9D8D4 15px, transparent 0),
+    radial-gradient(circle closest-side at 40px 35px, #36964C 15px, transparent 0),
+    radial-gradient(circle closest-side at 70px 40px, #F9D8D4 15px, transparent 0),
+    radial-gradient(circle closest-side at 60px 35px, #286E38 15px, transparent 0),
+    
+    radial-gradient(circle closest-side at 130px 155px, #F9D8D4 15px, transparent 0),
+    radial-gradient(circle closest-side at 140px 150px, #36964C 15px, transparent 0),
+    radial-gradient(circle at 170px 155px, #F9D8D4 15px, transparent 0),
+    radial-gradient(circle at 160px 150px, #286E38 15px, transparent 0)
+    ;
+    background-color: #F9D8D4;
+    background-size: 180px 210px;
+    animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
+}
+
+@keyframes animatedBackground {
+    from { background-position: 0 50%; }
+    to { background-position: 0 0; }
+}
+header{
+    color:#da42b4;
+    padding:20px;
+}
+form {
+display: grid;
+width: 60%; 
+grid-template-columns: 50% 50%; 
+align-items:center;
+grid-gap: 1em;
+}
+input {
+    border: 3px solid #ca75b5;; 
+    color: #da42b4;; 
+    background-color: #f687da;
+    }
+
+input[type="submit"] {
+    grid-column: 1/3;
+    font-weight: bold;
+    }
+
+input::placeholder {
+    color: #da42b4;
+}
+select{
+border: 3px solid #ca75b5; 
+color: #da42b4;
+background-color: #f687da;
+}
+    .fa {
+        padding: 20px;
+        font-size: 300px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .fa:hover {
+        opacity: 0.7;
+      }
+      .fa-instagram {
+        background: #ea4c89;
+        color: white;
+      }
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
