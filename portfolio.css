@@ -1,5 +1,11 @@
 body 
-{background:
+{display:grid;
+    grid-template-columns:25% 25% 25% 25%;
+    grid-template-rows:auto;
+    grid-template-areas:"header header header header"
+    "main main main main"
+    "footer footer footer footer";
+    background:
         /* Pineapple details */
         radial-gradient(circle closest-side at 50px 50px, #FB8B24 3px, transparent 0),
         radial-gradient(circle closest-side at 40px 60px, #FB8B24 3px, transparent 0),
@@ -36,4 +42,32 @@ body
         from { background-position: 0 50%; }
         to { background-position: 0 0; }
     }
-    
+    header {
+        animation: bounceInDown;
+        animation-duration: 2s;
+        color:#da42b4;
+        padding:20px;
+        grid-area:header;
+    }
+    main{
+        animation: fadeInLeft;
+        animation-duration: 3s;
+        color: #da42b4;
+text-align: left;
+grid-area:main;
+    }
+    img {
+        animation: fadeInLeft;
+        animation-duration: 4s;
+        background: #f687da;
+        border: 1px solid #ca75b5;
+        margin: 8px 0 0 20px;
+        padding: 4px;
+        height: 300px;
+        width: 300px;
+        display:block;
+      }
+      footer{
+        color:white;
+        grid-area:footer;
+    }
