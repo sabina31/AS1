@@ -1,11 +1,11 @@
 body 
 {display:grid;
-    grid-template-columns:100%;
+    grid-template-columns:16% 16% 48% 16%;
     grid-template-rows:auto;
     grid-template-areas:"header header header header"
     "nav nav nav nav"
-    "main main main main"
-    "footer footer footer footer";
+    "main main main aside"
+    "footer footer footer footer";;
     background:
         /* Pineapple details */
         radial-gradient(circle closest-side at 50px 50px, #FB8B24 3px, transparent 0),
@@ -96,10 +96,24 @@ width: 100%;
 text-align: center;
 border: 8px solid #ffb3ab;
 background-color: #ffb3ab;
+font-size: 20px;
+  text-shadow: 1px 1px white;
+  grid-area: main;
+}
+aside{
+    color: #da42b4;
+animation: fadeInLeft;
+animation-duration: 4s;
+width: 100%;
+text-align: right;
+border: 10px solid white;
+padding:7px;
+background-color: #ffb3ab;
+font-weight: bold;
 font-size: 14px;
   text-shadow: 1px 1px white;
+  grid-area: aside;
 }
-
 footer{
     color:white;
     grid-area:footer;
