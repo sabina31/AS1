@@ -51,7 +51,7 @@ display:grid;
         color: #da42b4;
         animation: fadeInLeft;
         animation-duration: 4s;
-        width: 100%;
+        width: auto;
         text-align: center;
         border: 8px solid #ffb3ab;
         background-color: #ffb3ab;
@@ -80,7 +80,7 @@ header {
 }
 aside{
     color: #da42b4;
-width: 100%;
+width: auto;
 text-align: right;
 border: 10px solid white;
 padding:7px;
