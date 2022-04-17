@@ -1,13 +1,11 @@
-body 
-{
-    font-family: 'Grape Nuts', cursive;
-    display:grid;
-    grid-template-columns:25% 25% 25% 25%;
+body{font-family: 'Grape Nuts', cursive;
+  display:grid;
+    grid-template-columns:100%;
     grid-template-rows:auto;
-    grid-template-areas:"header header header header"
-    "nav nav nav nav"
-    "main main main main"
-    "footer footer footer footer";
+    grid-template-areas:"header"
+    "nav"
+    "main"
+    "footer";
     background:
         /* Pineapple details */
         radial-gradient(circle closest-side at 50px 50px, #FB8B24 3px, transparent 0),
@@ -46,92 +44,106 @@ body
         to { background-position: 0 0; }
     }
     header {
-        animation: bounceInDown;
-        animation-duration: 2s;
         color:#da42b4;
         padding:10px;
         grid-area:header;
         font-size: 30px;
         text-shadow: 3px 3px white;
     }
-    main{
-        animation: fadeInLeft;
-        animation-duration: 3s;
-        color: #da42b4;
-text-align: left;
-grid-area:main;
-    }
-    main > h2{
-        font-size: 40px;
-        font-weight: bold;
-    }
-    .desc
-{
-text-align: right;
-font-size: 30px;
-text-shadow: 3px 3px white;
-}
     nav {
+        background-color:#f7b6af;
         grid-area:nav;
         color:#da42b4;
-        animation: fadeInLeft;
-        animation-duration: 3s;
-    }
-    nav ul {
-        border: 8px solid #ffb3ab;
-        background-color: #ffb3ab;
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        text-align: center;
-        color:#da42b4;
-        font-size: 20px;
-        text-shadow: 1px 1px white;
-    }
-    nav > ul > li {
-        position:relative;
-    }
-    nav ul ul {
-        position: absolute;
         display: block;
-        padding: 0;
-        width: 100%;
-        opacity:0;
-        transition: opacity 0.5s ease-in;
-        pointer-events: none;
-       }
-       nav > ul > li:hover ul {
-        opacity:1;
-        display:block;
-        pointer-events: auto;
-       }
-       .blog{
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100vh;
+        transform: translate(100%, 0);
+        transition: transform 0.5s ease-in;
+        }
+        .shownav {
+            height: 0.8em;
+            width: 1.25em;
+            display: block;
+             border-top: 0.2em solid #e787cf;
+            border-bottom: 0.2em solid #e787cf;
+        }
+        .shownav:before {
+                content: '';
+                 position: absolute;
+                 width: 1.25em;
+                 margin-top: 0.3em;
+                 border-top: 0.2em solid #e787cf;
+            }
+    .blog{
         padding:5px;
         margin:5px;
         border: 8px solid #ffb3ab;
-       }
-       .blog > h1{
-           font-size:50px;
-       }
+    }
     img {
-        animation: fadeInLeft;
-        animation-duration: 4s;
-        background: #f687da;
-        border: 1px solid #ca75b5;
-        margin: 30px 0 0 50px;
-        padding: 10px;
+        margin: 8px 0 0 20px;
+        padding: 4px;
         height: 300px;
         width: 300px;
-        display:fixed;
+        display:block;
       }
       footer{
         color:white;
         grid-area:footer;
-        animation:fadeInBottomLeft;
-        animation-duration: 5s;
-        margin-left:auto;
         bottom:0;
         width:100%;
         height:30px;
-        position:fixed;
+      }
+      main{
+        color: #da42b4;
+        text-align: left;
+        grid-area:main;
     }
+      .button {
+        display: inline-block;
+        border-radius: 10px;
+        background-color: #da42b4;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 17px;
+        width: 90px;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+      
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -30px;
+        transition: 0.5s;
+      }
+      
+      .button:hover span {
+        padding-right: 25px;
+      }
+      
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+#clicked .shownav {display: block;}
+#clicked .off {display: none;}
+#clicked:target .shownav {display: none;}
+#clicked:target .off {display: block;}
+
+#clicked:target nav{display:block;
+    transform: translate(0,0);}
+

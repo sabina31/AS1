@@ -1,10 +1,12 @@
 body 
-{display:grid;
-    grid-template-columns:16% 16% 48% 16%;
+{
+    font-family: 'Grape Nuts', cursive;
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%;
     grid-template-rows:auto;
     grid-template-areas:"header header header header"
     "nav nav nav nav"
-    "main main main aside"
+    "main main main main"
     "footer footer footer footer";
     background:
         /* Pineapple details */
@@ -37,26 +39,39 @@ body
         background-color: #F9D8D4;
         background-size: 180px 210px;
         animation: animatedBackground .5s cubic-bezier(.61,-0.64,.58,1.46) forwards;
-
-        font-family: 'Grape Nuts', cursive;
 }
     
     @keyframes animatedBackground {
         from { background-position: 0 50%; }
         to { background-position: 0 0; }
     }
-
-header {
-        color:#da42b4;
-        padding:5px;
-        grid-area:header;
-        text-align: center;
+    header {
         animation: bounceInDown;
-  animation-duration: 1s;
-  font-size: 50px;
-  text-shadow: 3px 3px white;
+        animation-duration: 2s;
+        color:#da42b4;
+        padding:10px;
+        grid-area:header;
+        font-size: 30px;
+        text-shadow: 3px 3px white;
     }
-nav {
+    main{
+        animation: fadeInLeft;
+        animation-duration: 3s;
+        color: #da42b4;
+text-align: left;
+grid-area:main;
+    }
+    main > h2{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .desc
+{
+text-align: right;
+font-size: 30px;
+text-shadow: 3px 3px white;
+}
+    nav {
         grid-area:nav;
         color:#da42b4;
         animation: fadeInLeft;
@@ -71,7 +86,7 @@ nav {
         text-align: center;
         color:#da42b4;
         font-size: 20px;
-  text-shadow: 1px 1px white;
+        text-shadow: 1px 1px white;
     }
     nav > ul > li {
         position:relative;
@@ -85,45 +100,39 @@ nav {
         transition: opacity 0.5s ease-in;
         pointer-events: none;
        }
-    nav > ul > li:hover ul {
-     opacity:1;
-     display:block;
-     pointer-events: auto;
+       nav > ul > li:hover ul {
+        opacity:1;
+        display:block;
+        pointer-events: auto;
+       }
+       .blog{
+        padding:5px;
+        margin:5px;
+        border: 8px solid #ffb3ab;
+       }
+       .blog > h1{
+           font-size:50px;
+       }
+    img {
+        animation: fadeInLeft;
+        animation-duration: 4s;
+        background: #f687da;
+        border: 1px solid #ca75b5;
+        margin: 30px 0 0 50px;
+        padding: 10px;
+        height: 300px;
+        width: 300px;
+        display:fixed;
+      }
+      footer{
+        color:white;
+        grid-area:footer;
+        animation:fadeInBottomLeft;
+        animation-duration: 5s;
+        margin-left:auto;
+        bottom:0;
+        width:100%;
+        height:30px;
+        position:fixed;
     }
-main{
-color: #da42b4;
-animation: fadeInLeft;
-animation-duration: 4s;
-width: 100%;
-text-align: center;
-border: 8px solid #ffb3ab;
-background-color: #ffb3ab;
-font-size: 20px;
-  text-shadow: 1px 1px white;
-  grid-area: main;
-}
-aside{
-    color: #da42b4;
-animation: fadeInLeft;
-animation-duration: 4s;
-width: 100%;
-text-align: right;
-border: 10px solid white;
-padding:7px;
-background-color: #ffb3ab;
-font-weight: bold;
-font-size: 22px;
-  text-shadow: 1px 1px white;
-  grid-area: aside;
-}
-footer{
-    color:white;
-    grid-area:footer;
-    animation:fadeInBottomLeft;
-    animation-duration: 5s;
-    bottom:0;
-    width:100%;
-    height:30px;
-    position:fixed;
-}
-header a {display: none;}
+    header a {display: none;}
