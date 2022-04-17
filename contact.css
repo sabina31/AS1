@@ -38,11 +38,54 @@ body{
     to { background-position: 0 0; }
 }
 header{
+    animation: bounceInDown;
+    animation-duration: 2s;
     color:#da42b4;
     padding:10px;
+    grid-area:header;
     font-size: 30px;
     text-shadow: 3px 3px white;
 }
+nav {
+  grid-area:nav;
+  color:#da42b4;
+  animation: fadeInLeft;
+  animation-duration: 3s;
+}
+nav ul {
+  border: 8px solid #ffb3ab;
+  background-color: #ffb3ab;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  text-align: center;
+  color:#da42b4;
+  font-size: 20px;
+  text-shadow: 1px 1px white;
+}
+nav > ul > li {
+  position:relative;
+}
+nav ul ul {
+  position: absolute;
+  display: block;
+  padding: 0;
+  width: 100%;
+  opacity:0;
+  transition: opacity 0.5s ease-in;
+  pointer-events: none;
+ }
+ nav > ul > li:hover ul {
+  opacity:1;
+  display:block;
+  pointer-events: auto;
+ }
+ .blog{
+  padding:5px;
+  margin:5px;
+  border: 8px solid #ffb3ab;
+  font-size: 30px;
+text-shadow: 3px 3px white;}
 form {
 display: grid;
 width: 60%; 

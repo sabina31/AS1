@@ -99,13 +99,7 @@ background-color: #ffb3ab;
 font-size: 14px;
   text-shadow: 1px 1px white;
 }
-.intro
-{width:20%;
-border-width: 3px;
-border-style: solid;
-border-color: black;
-display:inline-grid;
-}
+
 footer{
     color:white;
     grid-area:footer;

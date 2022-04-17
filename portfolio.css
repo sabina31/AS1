@@ -59,6 +59,12 @@ body
 text-align: left;
 grid-area:main;
     }
+    .desc
+{
+text-align: right;
+font-size: 20px;
+text-shadow: 3px 3px white;
+}
     nav {
         grid-area:nav;
         color:#da42b4;
@@ -74,7 +80,7 @@ grid-area:main;
         text-align: center;
         color:#da42b4;
         font-size: 20px;
-  text-shadow: 1px 1px white;
+        text-shadow: 1px 1px white;
     }
     nav > ul > li {
         position:relative;
@@ -96,14 +102,16 @@ grid-area:main;
        .blog{
         padding:5px;
         margin:5px;
-        border: 8px solid #ffb3ab;}
+        border: 8px solid #ffb3ab;
+        font-size: 30px;
+    text-shadow: 3px 3px white;}
     img {
         animation: fadeInLeft;
         animation-duration: 4s;
         background: #f687da;
         border: 1px solid #ca75b5;
-        margin: 8px 0 0 20px;
-        padding: 4px;
+        margin: 30px 0 0 50px;
+        padding: 10px;
         height: 300px;
         width: 300px;
         display:block;
