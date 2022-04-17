@@ -1,12 +1,14 @@
 body{
-  display:grid;
-    grid-template-columns:15% 15% 48% 20%;
-    grid-template-rows:auto;
-    grid-template-areas:"header header header header"
-    "nav nav nav nav"
-    "main main main aside"
-    "footer footer footer footer";
     font-family: 'Grape Nuts', cursive;
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-rows:auto;
+    grid-template-areas:"header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  
     color:#da42b4;
     background:
     /* Pineapple details */
@@ -57,6 +59,7 @@ main{
 }
 aside{
   grid-area: aside;
+  width:auto;
   border: 5px solid #ca75b5;
   font-size: 20px;
   text-align: center;
@@ -99,7 +102,7 @@ nav {
 text-shadow: 3px 3px white;}
 form {
 display: grid;
-width: 60%; 
+width: auto; 
 grid-template-columns: 50% 50%; 
 align-items:center;
 grid-gap: 1em;
